@@ -29,13 +29,13 @@ function Home() {
         </div>
         <div className="absolute bottom-16 left-10 md:w-[30%] pr-5 md:pr-0">
           <div className="font-bold text-xl sm:text-2xl md:text-3xl md:my-3 ">
-            Lorem
+            About us
           </div>
           <div className="text-[13px] sm:text-base md:text-[18px] ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sit,
-            laudantium cupiditate esse animi ab ex, iure eveniet provident
-            facilis, similique dignissimos fuga. Nam ex at ipsum quae placeat
-            voluptates.
+          A social network that offers users the opportunity to connect with people, 
+          businesses, and organizations. You can post updates and respond to the posts 
+          of others. You can share photographs and links to online content. 
+          Users can chat live, and upload and share video.
           </div>
           <div className="flex gap-x-3 items-center justify-start mt-6 sm:mt-8 md:mt-10 ">
             <button
