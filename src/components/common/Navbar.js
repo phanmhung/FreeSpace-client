@@ -7,6 +7,8 @@ import { BiSearchAlt } from 'react-icons/bi';
 import { AiFillHome } from 'react-icons/ai';
 import { RiSpaceShipFill } from 'react-icons/ri';
 import { BsMoon, BsFillSunFill } from 'react-icons/bs';
+
+import ReactLoading from "react-loading";
 function Navbar() {
   const { dark, setOneState } = useAppContext();
 
