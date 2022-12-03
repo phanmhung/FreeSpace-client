@@ -88,7 +88,7 @@
     }
 
     .btn-home {
-        @apply w-24 sm:w-28 md:w-32  md:py-0.5 font-bold relative bg-inherit hover:bg-gradient-to-r from-purple-500 to-pink-500 transition-50 hover:text-white text-base sm:text-xl;
+        @apply w-64 sm:w-44 md:w-52  md:py-0.5 font-bold relative bg-inherit hover:bg-gradient-to-r from-purple-500 to-pink-500 transition-50 hover:text-white text-base sm:text-xl;
     }
     .before-nav {
         @apply before:absolute before:z-[100] before:top-[115%] before:text-white/80 before:bg-[#3A3B3C] before:text-[14px] before:px-2.5 before:py-1.5;

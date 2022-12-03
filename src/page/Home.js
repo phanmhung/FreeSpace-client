@@ -18,7 +18,7 @@ function Home() {
         <img
           src={dark ? `images/earth.png`: `images/earth2.png`}
           alt="rocket"
-          className="absolute right-20 w-auto object-contain translate-y-1/3 "
+          className="absolute right-40 w-auto object-contain translate-y-1/3"
         />
 
         <div className="top-[13vh] md:top-[15vh] left-10 text-[40px] sm:text-[60px] md:text-[80px] font-semibold z-10 absolute text-[#210028] dark:text-sky-300 raleway ">
@@ -44,16 +44,9 @@ function Home() {
                 navigate('/login');
               }}
             >
-              Login
+              Let's start your journey
             </button>
-            <button
-              className="btn-home boxed"
-              onClick={() => {
-                navigate('/register');
-              }}
-            >
-              Register
-            </button>
+            
           </div>
         </div>
       </div>
