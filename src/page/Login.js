@@ -28,7 +28,6 @@ const Login = () => {
     try {
       const { password, rememberPassword } = state;
       const email = state.email.toLowerCase();
-     
 
       const { data } = await autoFetch.post('/api/auth/login', {
         email,
@@ -60,8 +59,10 @@ const Login = () => {
         {/* form */}
         <div className="w-full md:w-[80%] mx-auto flex items-center justify-center  md:justify-between z-[1] md:mt-4 ">
           <div className="bg-[#FEE7D6] dark:bg-[#3a3a3a] dark:text-white/70 w-[90%] md:w-auto px-[20px] md:px-[80px] py-[30px] md:py-[40px] rounded-3xl ">
-            <AiOutlineLogin size={32} />
-            <span className="text-sm md:text-[16px] mb-2">Log in</span>
+            <div className=" flex justify-center items-center">
+              <AiOutlineLogin size={32} />
+              <div className="text-sm md:text-[32px] -[#F25019] ml-2">Log in</div>
+            </div>
             <form
               className="md:mt-[20px] "
               onSubmit={(e) => {
@@ -123,7 +124,7 @@ const Login = () => {
                 </span>
               </div>
               <button
-                className={`mt-[35px] md:mt-[35px] w-full font-extrabold text-[20px] md:text-2xl bg-[#F25019] text-white py-[8px] md:py-[13px] rounded-[5px] ${
+                className={`mt-[35px] md:mt-[35px] w-full font-extrabold text-[20px] md:text-2xl bg-[#26A69A] text-white py-[8px] md:py-[13px] rounded-[5px] ${
                   loading ? 'loading' : ''
                 } flex items-center justify-center `}
                 type="submit"

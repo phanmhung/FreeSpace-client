@@ -4,8 +4,8 @@ import { useAppContext } from '../../context/useContext';
 
 // icons
 import { BiSearchAlt } from 'react-icons/bi';
-import { AiFillHome } from 'react-icons/ai';
-import { RiSpaceShipFill } from 'react-icons/ri';
+import { AiFillHome, AiOutlineLogin } from 'react-icons/ai';
+import {FiLogIn} from 'react-icons/fi';
 import { BsMoon, BsFillSunFill } from 'react-icons/bs';
 
 import ReactLoading from "react-loading";
@@ -101,15 +101,9 @@ function Navbar() {
           className={`relative bg-inherit text-[#26A69A] py-2 md:py-2.5 my-1 mx-1 shrink-1 w-full flex justify-center hover:text-[#00897B] hover:bg-[#EBEDF0] rounded-[10px] text-[23px] transition-20 after:content-[''] after:absolute after:h-[3px] after:w-[70%] after:left-[15%] after:bg-[#26A69A] after:opacity-0 after:bottom-0 -['Home']  before:rounded-lg dark:bg-inherit before:opacity-0 dark:text-[#B8BBBF] dark:hover:bg-[#3A3B3C] dark:hover:text-[#d2d5d7] `}
           role="button"
         >
-          <RiSpaceShipFill />
+          <FiLogIn />
         </NavLink>
-        <NavLink
-          to="/register"
-          className={`relative bg-inherit text-[#607D8B] py-2 md:py-2.5 my-1 mx-1 shrink-1 w-full flex justify-center hover:text-[#455A64] hover:bg-[#EBEDF0] rounded-[10px] text-[23px] transition-20 after:content-[''] after:absolute after:h-[3px] after:w-[70%] after:left-[15%] after:bg-[#607D8B] after:opacity-0 after:bottom-0 -['Home']  before:rounded-lg dark:bg-inherit before:opacity-0 dark:text-[#B8BBBF] dark:hover:bg-[#3A3B3C] dark:hover:text-[#d2d5d7] `}
-          role="button"
-        >
-          <RiSpaceShipFill className="rotate-180" />
-        </NavLink>
+        
       </ul>
 
       {/* right zone */}
