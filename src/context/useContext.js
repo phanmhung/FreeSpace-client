@@ -73,7 +73,8 @@ const AppProvider = ({children}) =>{
     };
 
     const setNameAndToken = (user, token) =>{
-        setState({...state, user, token});
+        console.log(user, token);
+        setState({...state, user: user, token: token});
         addToLocalStorage(user, token);
     };
 
@@ -88,7 +89,8 @@ const AppProvider = ({children}) =>{
                 setNameAndToken,
                 setOneState,
                 addToLocalStorage,
-                setState,autoFetch
+                setState,
+                autoFetch
             }}>
             {children}
         </AppContext.Provider>

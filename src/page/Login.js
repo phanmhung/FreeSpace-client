@@ -34,6 +34,7 @@ const Login = () => {
         password,
         rememberPassword,
       });
+      console.log("🚀 ~ file: Login.js:37 ~ login ~ data", data)
       setNameAndToken(data.user, data.token);
       toast.success('Login success.');
       setLoading(false);
