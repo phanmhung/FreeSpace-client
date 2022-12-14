@@ -34,16 +34,17 @@ const Modal = ({
         try {
             setImage(null);
             const file = e.target.files[0];
-            // @ts-ignore
+            
+            
             setImage({url: URL.createObjectURL(file)});
 
             let formData = new FormData();
             formData.append("image", file);
-
+            
             if (isEditPost) {
                 setFormDataEdit(formData);
             } else {
-                // @ts-ignore
+                
                 setFormData(formData);
             }
         } catch (error) {
@@ -51,6 +52,7 @@ const Modal = ({
         }
         setLoading(false);
     };
+    
 
     const handleButton = () => {
         if (isEditPost) {
@@ -58,7 +60,7 @@ const Modal = ({
             handleEditPost();
         } else {
             // Create post
-            // @ts-ignore
+            
             createNewPost(formData);
         }
         setText("");
@@ -72,7 +74,7 @@ const Modal = ({
             return (
                 <div className='w-full h-full relative group '>
                     <img
-                        // @ts-ignore
+                        
                         src={image.url}
                         alt='xasdws'
                         className='flex items-center justify-center w-full max-h-full object-contain '

@@ -6,5 +6,5 @@ import LoadingForm from './loading/LoadingForm';
 
 import Modal from './common/Modal';
 import { Post } from './common/Post';
-import { FormCreatePost } from './common/FormCreatePost';
+import  FormCreatePost  from './common/FormCreatePost';
 export { Navbar, Dashboard, LoadingPost, Post, FormCreatePost, LoadingForm , Modal};

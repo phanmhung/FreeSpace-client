@@ -42,6 +42,7 @@ const Center = ({
         }
         try {
             let image = null;
+            
             if (formData) {
                 const {data} = await autoFetch.post(
                     `/api/post/upload-image`,
@@ -54,6 +55,8 @@ const Center = ({
                 content: text,
                 image,
             });
+            
+            
             setPosts([data.post, ...posts]);
         } catch (error) {
             console.log(error);
@@ -111,10 +114,10 @@ const Center = ({
     };
 
     const form = () => {
-        if (error) {
-            return <></>;
-        }
-        if (loading) return <LoadingForm />;
+        // if (error) {
+        //     return <></>;
+        // }
+        // if (loading) return <LoadingForm />;
         return (
             <FormCreatePost
                 setAttachment={setAttachment}
@@ -129,7 +132,7 @@ const Center = ({
         <div className=''>
             {form()}
 
-            {openModal && !isQrCode && (
+            {openModal && (
                 <Modal
                     setOpenModal={setOpenModal}
                     text={text}
@@ -140,7 +143,7 @@ const Center = ({
                 />
             )}
             {loadingCreateNewPost && <LoadingPost className='mb-4' />}
-            {content()}
+            {/* {content()} */}
         </div>
     );
 };
