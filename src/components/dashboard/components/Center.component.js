@@ -82,7 +82,7 @@ const Center = ({
                 </div>
             );
         }
-        if (posts.length === 0) {
+        if (!posts ) {
             return (
                 <div className='w-full text-center text-xl font-semibold pt-[20vh] flex-col '>
                     <div>
@@ -143,7 +143,7 @@ const Center = ({
                 />
             )}
             {loadingCreateNewPost && <LoadingPost className='mb-4' />}
-            {/* {content()} */}
+            {content()}
         </div>
     );
 };
