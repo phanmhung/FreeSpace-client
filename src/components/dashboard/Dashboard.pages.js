@@ -28,6 +28,7 @@ const Dashboard = () => {
             const {data} = await autoFetch.get(
                 `/api/post/news-feed?page=1&perPage=5`
             );
+            console.log("🚀 ~ file: Dashboard.pages.js:36 ~ getAllPosts ~ data", data)
             setPosts(data.posts);
         } catch (error) {
             console.log(error);
@@ -38,11 +39,13 @@ const Dashboard = () => {
 
     const getNewPosts = async () => {
         try {
+            console.log("test");
             const {data} = await autoFetch.get(
                 `/api/post/news-feed?page=${page + 1}&perPage=5`
             );
+            console.log("🚀 ~ file: Dashboard.pages.js:44 ~ getNewPosts ~ data", data)
             setPage(page + 1);
-            // @ts-ignore
+            
             setPosts([...posts, ...data.posts]);
         } catch (error) {
             console.log(error);
