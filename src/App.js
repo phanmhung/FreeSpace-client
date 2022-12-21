@@ -6,6 +6,7 @@ import { Home, Register, Login, NotFound } from './page';
 import { Dashboard } from './page/layout';
 import LoggedinLayout from './page/LoggedinLayout';
 import ShareLayout from './page/ShareLayout';
+import { Profile } from './page/user';
 
 function App() {
   const { dark } = useAppContext();
@@ -33,6 +34,8 @@ function App() {
                 </LoggedinLayout>
               }>
             <Route index path="/" element={<Dashboard />} />
+
+            <Route path='/profile/*' element={<Profile />} />
           </Route>
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
