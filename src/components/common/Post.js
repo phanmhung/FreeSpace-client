@@ -18,6 +18,7 @@ import {MdCancel} from "react-icons/md";
 import {useAppContext} from "../../context/useContext";
 import Modal from "./Modal";
 import PostLoading from "../loading/LoadingPost";
+import Comment from "./Comment";
 
 const Post = ({
     currentPost,
