@@ -43,7 +43,7 @@ const Register = () => {
                 rePassword,
                 secret,
             });
-            toast.success(data?.msg || "Register success!");
+            toast.success(data?.message || "Register success!");
             setState(initState);
             setLoading(false);
             setTimeout(() => {
@@ -52,7 +52,7 @@ const Register = () => {
         } catch (error) {
             setLoading(false);
             console.log(error);
-            toast.error(error?.response?.data?.msg || "Something went wrong!");
+            toast.error(error?.response?.data?.message || "Something went wrong!");
         }
     };
 
