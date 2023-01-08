@@ -28,7 +28,7 @@ const Dashboard = () => {
             const {data} = await autoFetch.get(
                 `/api/post/news-feed?page=1&perPage=5`
             );
-            console.log("🚀 ~ file: Dashboard.pages.js:36 ~ getAllPosts ~ data", data)
+            
             setPosts(data.posts);
         } catch (error) {
             console.log(error);
@@ -78,14 +78,14 @@ const Dashboard = () => {
                 </div>
                 <div className='col-span-11 md:col-span-3 relative order-2 md:order-3 '>
                     <Right
-                        // autoFetch={autoFetch}
-                        // getAllPosts={getAllPosts}
-                        // navigate={navigate}
-                        // setNameAndToken={setNameAndToken}
-                        // user={user}
-                        // token={token}
-                        // dark={dark}
-                        // error={error}
+                        autoFetch={autoFetch}
+                        getAllPosts={getAllPosts}
+                        navigate={navigate}
+                        setNameAndToken={setNameAndToken}
+                        user={user}
+                        token={token}
+                        dark={dark}
+                        error={error}
                     />
                 </div>
             </div>
