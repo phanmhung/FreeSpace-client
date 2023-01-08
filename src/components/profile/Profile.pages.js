@@ -74,9 +74,9 @@ const Profile = () => {
         if (posts.length) {
             setImages(
                 posts.filter((p) => {
-                    // @ts-ignore
+                    
                     if (p && p.image) {
-                        // @ts-ignore
+                        
                         return p.image;
                     }
                 })
@@ -85,9 +85,9 @@ const Profile = () => {
     }, [posts]);
 
     const getDeletePostId = (postId) => {
-        // @ts-ignore
+        
         const newPosts = posts.filter((v) => v._id !== postId);
-        // @ts-ignore
+        
         setPosts(newPosts);
         console.log("delete post: ", postId);
     };

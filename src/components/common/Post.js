@@ -63,13 +63,13 @@ const Post = ({
     const handleImage = (e) => {
         setImageComment(null);
         const file = e.target.files[0];
-        // @ts-ignore
+        
         setImageComment({url: URL.createObjectURL(file)});
 
         let formData = new FormData();
         formData.append("image", file);
 
-        // @ts-ignore
+        
         setFormData(formData);
     };
 
@@ -494,7 +494,7 @@ const Post = ({
                 {imageComment && (
                     <div className='relative '>
                         <img
-                            // @ts-ignore
+                            
                             src={imageComment.url}
                             alt='image_comment'
                             className='h-20 w-auto object-contain '

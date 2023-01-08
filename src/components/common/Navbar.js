@@ -95,7 +95,7 @@ function Navbar() {
         <div className="flex items-center border border-black/20 dark:bg-[#4E4F50] dark:text-[#b9bbbe] w-[180px] md:w-[220px] h-auto md:h-[40px] rounded-full px-2 ml-2 ">
           <BiSearchAlt className="text-16px md:text-[20px] mx-1 " />
           <div
-            // @ts-ignore
+            
             ref={searchRef}
           >
             <input

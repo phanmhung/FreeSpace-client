@@ -50,7 +50,7 @@ const Comment = ({
 
         let formData = new FormData();
         formData.append("image", file);
-        // @ts-ignore
+        
         setFormData(formData);
     };
 
@@ -155,12 +155,12 @@ const Comment = ({
     // add image in reply
     const changeImageReply = (e) => {
         const file = e.target.files[0];
-        // @ts-ignore
+        
         setReplyImage({url: URL.createObjectURL(file)});
 
         let formData = new FormData();
         formData.append("image", file);
-        // @ts-ignore
+        
         setFormData(formData);
     };
 
@@ -530,7 +530,7 @@ const Comment = ({
                         <div className='w-full pl-[16%] '>
                             <div className='relative group w-max '>
                                 <img
-                                    // @ts-ignore
+                                    
                                     src={replyImage.url}
                                     alt='reply_image'
                                     className='object-contain w-auto mt-2 max-h-20 '
