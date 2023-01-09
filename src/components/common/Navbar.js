@@ -48,6 +48,7 @@ function Navbar() {
       },
     ];
 
+    if(user.role === undefined) return list;
     if (user.role === 'Admin') {
       list.push({
         text: '#607D8B',
