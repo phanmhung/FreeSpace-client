@@ -13,7 +13,8 @@ import LoadingSuggestion from './loading/LoadingSuggestion';
 import Modal from './common/Modal';
 import Post from './common/Post';
 import FormCreatePost from './common/FormCreatePost';
-
+import Dropdown
+ from './common/Dropdown';
 export {
   Navbar,
   Dashboard,
@@ -23,6 +24,7 @@ export {
   LoadingForm,
   Modal,
   Profile,
+  Dropdown,
   LoadingCard,
   LoadingImage,
   LoadingIntro,

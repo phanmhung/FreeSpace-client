@@ -10,6 +10,7 @@ import { BsMoon, BsFillSunFill } from 'react-icons/bs';
 import { SiMessenger } from 'react-icons/si';
 
 import ReactLoading from 'react-loading';
+import Dropdown from './Dropdown';
 
 function Navbar() {
   const { dark, setOneState, user, autoFetch } = useAppContext();
@@ -169,14 +170,14 @@ function Navbar() {
         className="flex items-center justify-end min-w-[33%] gap-x-1 sm:gap-x-2 md:gap-x-3 "
         style={{ flex: '1 1 auto' }}
       >
-        {/* <div className='flex items-center'>
+        <div className='flex items-center'>
                     {user && (
                         <div className='text-sm md:text-md font-semibold border pl-3 md:pr-5 py-[5px] rounded-l-full translate-x-[16px] bg-[#3F51B5] text-white dark:bg-[#3A3A3A] dark:border-white/30 hidden md:flex '>
                             {user.name}
                         </div>
                     )}
                     <Dropdown />
-                </div> */}
+                </div>
         <div
           className="p-1 w-[50px] h-[30px] rounded-full border-2 border-black/30 dark:bg-[#3A3B3C] bg-[#333]/10 dark:border-[#929292] relative "
           onClick={() => {
