@@ -95,10 +95,7 @@ function Navbar() {
 
         <div className="flex items-center border border-black/20 dark:bg-[#4E4F50] dark:text-[#b9bbbe] w-[180px] md:w-[220px] h-auto md:h-[40px] rounded-full px-2 ml-2 ">
           <BiSearchAlt className="text-16px md:text-[20px] mx-1 " />
-          <div
-            
-            ref={searchRef}
-          >
+          <div ref={searchRef}>
             <input
               type="text"
               className="text-[15px] border-none bg-inherit w-[80%] focus:ring-0 focus:border-0 pl-0 font-medium dark:placeholder:text-[#b1b2b5] dark:text-[#cecfd2] "
@@ -170,14 +167,14 @@ function Navbar() {
         className="flex items-center justify-end min-w-[33%] gap-x-1 sm:gap-x-2 md:gap-x-3 "
         style={{ flex: '1 1 auto' }}
       >
-        <div className='flex items-center'>
-                    {user && (
-                        <div className='text-sm md:text-md font-semibold border pl-3 md:pr-5 py-[5px] rounded-l-full translate-x-[16px] bg-[#3F51B5] text-white dark:bg-[#3A3A3A] dark:border-white/30 hidden md:flex '>
-                            {user.name}
-                        </div>
-                    )}
-                    <Dropdown />
-                </div>
+        <div className="flex items-center">
+          {user && (
+            <div className="text-sm md:text-md font-semibold border pl-3 md:pr-5 py-[5px] rounded-l-full translate-x-[16px] bg-[#3F51B5] text-white dark:bg-[#3A3A3A] dark:border-white/30 hidden md:flex ">
+              {user.name}
+            </div>
+          )}
+          <Dropdown />
+        </div>
         <div
           className="p-1 w-[50px] h-[30px] rounded-full border-2 border-black/30 dark:bg-[#3A3B3C] bg-[#333]/10 dark:border-[#929292] relative "
           onClick={() => {
