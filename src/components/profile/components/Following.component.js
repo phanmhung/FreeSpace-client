@@ -31,8 +31,9 @@ const FollowingPage = ({
         setLoading(true);
         try {
             const {data} = await autoFetch.get(
-                `/api/auth/user-following/${userId}`
+                `/api/auth/list-following/${userId}`
             );
+            
             setListFollowing(data.following);
         } catch (error) {
             console.log(error);
@@ -87,6 +88,8 @@ export function People({
     token,
     autoFetch,
 }) {
+    console.log("🚀 ~ file: Following.component.js:91 ~ own", own.following)
+    console.log("🚀 ~ file: Following.component.js:91 ~ p", p._id)
     const [loading, setLoading] = useState(false);
 
     const navigateToUserPage = (peopleId) => {
@@ -135,7 +138,7 @@ export function People({
             );
         }
         if (userId === own._id) {
-            if (own.following.includes(p._id)) {
+            if (own.following.map(f=> f.toString()).includes(p._id)) {
                 return (
                     <button
                         className='px-3 sm:px-4 py-1 md:py-2 ml-auto hover:bg-[#3C4D63] bg-[#3C4D63]/50 transition-20 text-white rounded-md text-[14px] sm:text-base '

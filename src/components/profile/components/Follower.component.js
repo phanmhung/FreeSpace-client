@@ -31,7 +31,7 @@ const FollowingPage = ({
         setLoading(true);
         try {
             const {data} = await autoFetch.get(
-                `/api/auth/user-follower/${userId}`
+                `/api/auth/list-follower/${userId}`
             );
             setListFollowing(data.follower);
         } catch (error) {
