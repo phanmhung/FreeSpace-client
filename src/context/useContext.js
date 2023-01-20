@@ -73,7 +73,7 @@ const AppProvider = ({children}) =>{
     };
 
     const setNameAndToken = (user, token) =>{
-        console.log(user, token);
+        
         setState({...state, user: user, token: token});
         addToLocalStorage(user, token);
     };

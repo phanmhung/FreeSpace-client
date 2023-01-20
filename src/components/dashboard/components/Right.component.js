@@ -26,7 +26,7 @@ const Right = ({
           
           // get suggestion user with user id
             const {data} = await autoFetch.get(`/api/auth/suggest-user`);
-            console.log("🚀 ~ file: Right.component.js:30 ~ getListPeople ~ data", data)
+            
             setListPeople(data.suggestions);
             
         } catch (error) {

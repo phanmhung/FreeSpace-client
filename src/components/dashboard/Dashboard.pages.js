@@ -43,7 +43,7 @@ const Dashboard = () => {
             const {data} = await autoFetch.get(
                 `/api/post/news-feed?page=${page + 1}&perPage=5`
             );
-            console.log("🚀 ~ file: Dashboard.pages.js:44 ~ getNewPosts ~ data", data)
+            
             setPage(page + 1);
             
             setPosts([...posts, ...data.posts]);
