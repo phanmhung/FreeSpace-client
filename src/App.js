@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { useAppContext } from './context/useContext';
 import { Home, Register, Login, NotFound, ForgetPassword } from './page';
-import { Dashboard } from './page/layout';
+import { Dashboard, Messenger } from './page/layout';
 import LoggedinLayout from './page/LoggedinLayout';
 import ShareLayout from './page/ShareLayout';
 import { Profile } from './page/user';
@@ -35,7 +35,7 @@ function App() {
             }
           >
             <Route index path="/" element={<Dashboard />} />
-
+            <Route path='/messenger' element={<Messenger />} />
             <Route path="/profile/*" element={<Profile />} />
           </Route>
 

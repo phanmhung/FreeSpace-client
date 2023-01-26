@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@headlessui/react": "^1.7.7",
+    "@mui/material": "^5.11.6",
+    "@mui/styled-engine": "^5.11.0",
     "@tailwindcss/forms": "^0.5.3",
     "axios": "^1.2.0",
     "dotenv": "^16.0.3",
@@ -18,7 +22,9 @@
     "react-scripts": "^5.0.1",
     "react-toastify": "^9.1.1",
     "react-use-keypress": "^1.3.1",
+    "socket.io-client": "^4.5.4",
     "tailwind-scrollbar": "^2.0.1",
+    "use-sound": "^4.0.1",
     "web-vitals": "^3.1.0"
   },
   "scripts": {

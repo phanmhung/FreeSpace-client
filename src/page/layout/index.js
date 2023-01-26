@@ -1,3 +1,3 @@
 import Dashboard from './dashboard/index';
-
-export { Dashboard};
+import Messenger from './messenger/index';
+export { Dashboard, Messenger};
