@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAppContext } from '../../context/useContext';
 
@@ -11,6 +11,9 @@ import { SiMessenger } from 'react-icons/si';
 
 import ReactLoading from 'react-loading';
 import Dropdown from './Dropdown';
+import useDebounce from '../../hooks/useDebounce';
+import useOnClickOutside from '../../hooks/useOnClickOutside';
+import ItemsList from './ItemsList';
 
 function Navbar() {
   const { dark, setOneState, user, autoFetch } = useAppContext();
@@ -20,6 +23,7 @@ function Navbar() {
   const [listSearchResult, setListSearchResult] = React.useState([]);
   const [isEmpty, setIsEmpty] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
+  const textDebounce = useDebounce(search, 500);
 
   const clearListResult = () => {
     setListSearchResult([]);
@@ -27,6 +31,30 @@ function Navbar() {
     setIsEmpty(false);
   };
   const searchRef = useRef();
+  useOnClickOutside(searchRef, ()=>clearListResult());
+
+  const handleSearch = async (e) => {
+    setLoading(true);
+    if(!search) return;
+    try{
+      const {data} = await autoFetch.get(`/api/auth/search-user/${search}`);
+      if (data.search.length === 0){
+        setIsEmpty(true);
+        setListSearchResult([]);
+      } else {
+        setIsEmpty(false);
+        setListSearchResult(data.search);
+      }
+
+    } catch (error){
+      console.log(error);
+    }
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    if (textDebounce) handleSearch();
+  }, [textDebounce]);
 
   const menuListLogged = useMemo(() => {
     const list = [
@@ -94,6 +122,8 @@ function Navbar() {
           />
         </NavLink>
 
+        {/* SEARCH */}
+        {user &&(
         <div className="flex items-center border border-black/20 dark:bg-[#4E4F50] dark:text-[#b9bbbe] w-[180px] md:w-[220px] h-auto md:h-[40px] rounded-full px-2 ml-2 ">
           <BiSearchAlt className="text-16px md:text-[20px] mx-1 " />
           <div ref={searchRef}>
@@ -102,7 +132,7 @@ function Navbar() {
               className="text-[15px] border-none bg-inherit w-[80%] focus:ring-0 focus:border-0 pl-0 font-medium dark:placeholder:text-[#b1b2b5] dark:text-[#cecfd2] "
               placeholder="Search "
               value={search}
-              onChange={(e) => setText(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
             />
 
             <div className="scroll-bar absolute max-h-[300px] rounded-[7px] w-[250px] overflow-y-auto overflow-x-hidden top-[60px] translate-x-[-10px] ">
@@ -134,6 +164,7 @@ function Navbar() {
             />
           )}
         </div>
+        )}
       </div>
 
       {/* middle nav */}
