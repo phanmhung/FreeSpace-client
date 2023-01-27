@@ -39,7 +39,7 @@ const Dashboard = () => {
 
     const getNewPosts = async () => {
         try {
-            console.log("test");
+            
             const {data} = await autoFetch.get(
                 `/api/post/news-feed?page=${page + 1}&perPage=5`
             );
