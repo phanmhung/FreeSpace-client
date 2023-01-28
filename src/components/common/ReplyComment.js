@@ -265,7 +265,7 @@ const ReplyComment = ({
                                 <AiFillHeart className='text-[14px] text-[#c22727] dark:text-[#c22727]' />
                                 {replyComment.like.length > 1
                                     ? replyComment.like.length
-                                    : ""}
+                                    : null}
                             </div>
                         )}
                     </div>

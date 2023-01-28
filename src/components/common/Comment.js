@@ -435,7 +435,7 @@ const Comment = ({
                                     </ul>
                                 </div>
                             )}
-                            {comment.like !== [] && (
+                            {comment.like.length > 0 && (
                                 <div
                                     className={`absolute bottom-2 bg-inherit p-1 ${
                                         comment.like && comment.like.length > 1
