@@ -2,6 +2,10 @@ import Navbar from './common/Navbar';
 import Dashboard from './dashboard/Dashboard.pages';
 import Profile from './profile/Profile.pages';
 import Messenger from './messenger/messenger.pages';
+import Admin from './admin/Admin.page';
+
+import Table from './common/table/Table';
+import LineChart from './common/chart/LineChart';
 
 import LoadingPost from './loading/LoadingPost';
 import LoadingForm from './loading/LoadingForm';
@@ -21,7 +25,8 @@ import ItemsList from './common/ItemsList';
 export {
   Navbar,
   Dashboard,
-  
+  Messenger,
+  Admin,
   Post,
   FormCreatePost,
   
@@ -30,6 +35,8 @@ export {
   Dropdown,
   GroupAvatars,
   ItemsList,
+  Table,
+  LineChart,
 
   LoadingPost,
   LoadingForm,
@@ -40,5 +47,5 @@ export {
   LoadingSuggestion,
   LoadingMessenger,
 
-  Messenger,
+  
 };

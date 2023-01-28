@@ -21,7 +21,7 @@ const Center = ({
     const [text, setText] = useState("");
     const [openModal, setOpenModal] = useState(false);
     const [loadingCreateNewPost, setLoadingCreateNewPost] = useState(false);
-    console.log("posts", posts);
+    
     // Modal
     useEffect(() => {
         setOneState("openModal", openModal);

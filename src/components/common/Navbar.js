@@ -14,6 +14,7 @@ import Dropdown from './Dropdown';
 import useDebounce from '../../hooks/useDebounce';
 import useOnClickOutside from '../../hooks/useOnClickOutside';
 import ItemsList from './ItemsList';
+import { MdAdminPanelSettings } from 'react-icons/md';
 
 function Navbar() {
   const { dark, setOneState, user, autoFetch } = useAppContext();
@@ -89,7 +90,7 @@ function Navbar() {
     }
     return list;
   }, [user.role]);
-
+  
   const navMenuLogged = () => {
     return menuListLogged.map((item) => (
       <div
