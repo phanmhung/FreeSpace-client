@@ -163,7 +163,6 @@ const ReplyComment = ({
             </div>
         );
     }
-    console.log("🚀 ~ file: ReplyComment.js:294 ~ replyComment", replyComment)
 
     return (
         <div className={`flex gap-x-1.5 mt-1.5 group pl-6 `}>

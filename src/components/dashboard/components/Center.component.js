@@ -21,7 +21,7 @@ const Center = ({
     const [text, setText] = useState("");
     const [openModal, setOpenModal] = useState(false);
     const [loadingCreateNewPost, setLoadingCreateNewPost] = useState(false);
-
+    console.log("posts", posts);
     // Modal
     useEffect(() => {
         setOneState("openModal", openModal);
@@ -98,7 +98,13 @@ const Center = ({
                 dataLength={posts.length}
                 next={getNewPosts}
                 hasMore={true}
-                loader={<LoadingPost />}>
+                loader={<LoadingPost />}
+                endMessage={
+                    <p style={{ textAlign: 'center' }}>
+                      <b>Yay! You have seen it all</b>
+                    </p>
+                  }
+                >
                 {posts.map((post) => (
                     <Post
                         key={post._id}
@@ -114,10 +120,10 @@ const Center = ({
     };
 
     const form = () => {
-        // if (error) {
-        //     return <></>;
-        // }
-        // if (loading) return <LoadingForm />;
+        if (error) {
+            return <></>;
+        }
+        if (loading) return <LoadingForm />;
         return (
             <FormCreatePost
                 setAttachment={setAttachment}

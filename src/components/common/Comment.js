@@ -356,7 +356,7 @@ const Comment = ({
             </div>
         );
     };
-
+    
     return (
         <div className={`relative mt-4 `}>
             {/* comment main */}
@@ -435,7 +435,7 @@ const Comment = ({
                                     </ul>
                                 </div>
                             )}
-                            {comment.like.length > 0 && (
+                            {comment.like !== [] && (
                                 <div
                                     className={`absolute bottom-2 bg-inherit p-1 ${
                                         comment.like && comment.like.length > 1
@@ -443,7 +443,7 @@ const Comment = ({
                                             : "right-[-20px]"
                                     } rounded-full flex items-center gap-x-0.5 border-[1px] border-black/10 dark:border-white/10 text-[13px] `}>
                                     <AiFillHeart className='text-[14px] text-[#c22727] dark:text-[#c22727]' />
-                                    {comment.like.length > 1
+                                    {comment.like ===[]
                                         ? comment.like.length
                                         : ""}
                                 </div>

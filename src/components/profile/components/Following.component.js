@@ -88,8 +88,7 @@ export function People({
     token,
     autoFetch,
 }) {
-    console.log("🚀 ~ file: Following.component.js:91 ~ own", own.following)
-    console.log("🚀 ~ file: Following.component.js:91 ~ p", p._id)
+    
     const [loading, setLoading] = useState(false);
 
     const navigateToUserPage = (peopleId) => {
