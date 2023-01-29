@@ -3,7 +3,8 @@ import { useAppContext } from "../../../context/useContext";
 import { Admin } from "../../../components";
 const AdminPages =()=>{
     const {user} = useAppContext();
-    if(user.role !== 'admin') return <Navigate to="/"/>;
+    
+    if(user.role !== 'Admin') return <Navigate to="/"/>;
     return <Admin />
 }
 
