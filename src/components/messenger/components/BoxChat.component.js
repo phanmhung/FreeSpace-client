@@ -134,7 +134,7 @@ const BoxChat = ({setOneState, state, getData, user, dispatch}) => {
         <div className='overflow-x-hidden'>
             <div className='overflow-x-hidden'>
                 <div className='flex justify-between items-center pt-4'>
-                    <h2 className='text-[#658189] font-extrabold text-xl sm:text-2xl md:text-3xl  '>
+                    <h2 className='text-[#0084ff] font-extrabold text-xl sm:text-2xl md:text-3xl  '>
                         Chats
                     </h2>
                     {/* btn add new message */}
